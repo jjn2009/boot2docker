@@ -262,7 +262,7 @@ RUN cp -v $ROOTFS/etc/version /tmp/iso/version
 
 # Get the Docker version that matches our boot2docker version
 # Note: `docker version` returns non-true when there is no server to ask
-RUN curl -L -o $ROOTFS/usr/local/bin/docker https://master.dockerproject.org/linux/amd64/docker && \
+RUN curl -L -o $ROOTFS/usr/local/bin/docker https://experimental.docker.com/builds/Linux/x86_64/docker-latest && \
     chmod +x $ROOTFS/usr/local/bin/docker && \
     { $ROOTFS/usr/local/bin/docker version || true; }
 
